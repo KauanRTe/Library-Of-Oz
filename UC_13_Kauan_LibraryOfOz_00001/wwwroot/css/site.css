@@ -21,6 +21,8 @@ body {
 /* NAV LATERAL - GENEROS */
 
 .nav-lateral {
+    display: grid;
+    justify-content: center;
     position: absolute;
     margin-left: -15vw;
     background-color: #F2B279;
@@ -30,7 +32,60 @@ body {
     width: 12vw
 }
 
+.nav-lateral h2 {
+    font-family: Verdana;
+    color: #593F42;
+    font-size: 24px;
+    margin-top: 5px;
+}
+
+.nav-lateral ul{
+    margin-top: -2vh;
+    height: 150%;
+    margin-left: -2vw;
+    list-style: none;
+}
+
+.nav-lateral li {
+    font-family: Verdana;
+    color: #593F42;
+    font-size: 18px;
+    list-style: none;
+    position: relative;
+    margin-top: -5px;
+    margin-right: -22vw;
+    margin-bottom: 1vh;
+}
+
+.navbar-lateral li::after {
+    margin-top: -6px;
+    content: "";
+    width: 0;
+    height: 3px;
+    position: absolute;
+    left: 0;
+    background: #593F42;
+    transition: 0.5s;
+}
+
+.navbar-lateral li:hover::after {
+    width: 100%;
+}
+
+.nav-lateral ul li a{
+    margin-left: -2vw;
+    font-family: Verdana;
+    font-size: 18px;
+    text-decoration: none;
+    color: #593F42;
+    font-size: 18px;
+    margin-top: 5px;
+}
+
+
  /* CSS DO NAVBAR PRINCIPAL */
+
+
 .bg-library-orange {
     background-color: #F2B279;
     border: 2px solid white;
