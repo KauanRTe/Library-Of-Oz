@@ -1,0 +1,158 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background-color: #F2E3B3;
+}
+
+/* NAV LATERAL - GENEROS */
+
+.nav-lateral {
+    position: absolute;
+    margin-left: -15vw;
+    background-color: #F2B279;
+    border: 2px solid white;
+    border-radius: 30px 40px;
+    height: 50vh;
+    width: 12vw
+}
+
+ /* CSS DO NAVBAR PRINCIPAL */
+.bg-library-orange {
+    background-color: #F2B279;
+    border: 2px solid white;
+    border-radius: 0px 0px 34px 34px;
+}
+
+#icons-nav{
+    height: 32px;
+    width: 32px;
+    margin-left: 2vw;
+    margin-right: 0.5vw;
+}
+
+#user-icon{
+    height: 32px;
+    width: 32px;
+    margin-top: -5px;
+}
+
+.navbar-logo {
+    font-family: Verdana;
+    font-size: 18px;
+    text-decoration: none;
+    color: #593F42;
+}
+
+.navbar-logo:hover {
+    font-family: Verdana;
+    font-size: 18px;
+    text-decoration: none;
+    color: #593F42;
+}
+
+.navbar-items {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+    margin-right: 30%;
+    height: 3vh;
+
+}
+
+.navbar-nav-pages{
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+    height: 100%;
+}
+
+    .navbar-nav-pages li {
+        font-family: Verdana;
+        color: #593F42;
+        font-size: 18px;
+        list-style: none;
+        position: relative;
+        margin-top: -5px;
+        margin-right: -22vw;
+    }
+
+    .navbar-nav-pages li::after {
+        margin-top: -6px;
+        content: "";
+        width: 0;
+        height: 3px;
+        position: absolute;
+        left: 0;
+        background: #593F42;
+        transition: 0.5s;
+    }
+
+.navbar-nav-pages li:hover::after{
+    width: 100%;
+}
+
+.login-part{
+    display: flex;
+    width: 15vw;
+    height: 100%;
+    margin-right: -30vw
+}
+
+    .login-part li {
+        font-family: Verdana;
+        color: #593F42;
+        font-size: 18px;
+        list-style: none;
+        position: relative;
+        margin-top: -5px;
+    }
+
+/* PARTE DO LANÇAMENTO DO MES*/
+
+.lancamentos {
+    background-color: #F2B279;
+    height: 30vh;
+    width: 120%;
+    margin-right: 20vw;
+    border: 2px solid white;
+    border-radius: 40px 0px;
+    margin-bottom: 5vh;
+}
+
+.lancamentos span {
+        margin-left: 2vw;
+        height: 10%;
+        width: 100%;
+        font-family: Verdana;
+        color: #593F42;
+        font-size: 20px;
+        
+}
+
+.container-books{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: yellow;
+    height: 90%;
+    width: 100%;
+}
+.books-lancamentos{
+    background-color: red;
+    height: 70%;
+    width: 10vw;
+}

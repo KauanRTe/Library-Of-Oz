@@ -1,0 +1,47 @@
+﻿@model IEnumerable<UC_13_Kauan_LibraryOfOz_00001.Models.Aluguel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeLivro)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomeCliente)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.DataDevolucao)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeLivro.NomeLivro)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomeCliente.NomeCliente)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DataDevolucao)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.AluguelId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.AluguelId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.AluguelId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
