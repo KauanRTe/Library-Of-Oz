@@ -23,6 +23,11 @@ namespace UC_13_Kauan_LibraryOfOz_00001.Controllers
             return View();
         }
 
+        public IActionResult Sobre()
+        {
+            return View();
+        }
+
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {

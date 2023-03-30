@@ -22,17 +22,18 @@ body {
 
 .nav-lateral {
     display: grid;
+    position: fixed;
     justify-content: center;
-    position: absolute;
-    margin-left: -15vw;
+    margin-left: -16vw;
     background-color: #F2B279;
     border: 2px solid white;
-    border-radius: 30px 40px;
+    border-radius: 0px 40px;
     height: 50vh;
     width: 12vw
 }
 
 .nav-lateral h2 {
+    margin-left: 1.9vw;
     font-family: Verdana;
     color: #593F42;
     font-size: 24px;
@@ -46,18 +47,13 @@ body {
     list-style: none;
 }
 
-.nav-lateral li {
-    font-family: Verdana;
-    color: #593F42;
-    font-size: 18px;
-    list-style: none;
-    position: relative;
-    margin-top: -5px;
-    margin-right: -22vw;
-    margin-bottom: 1vh;
+.nav-lateral ul li a{
+   margin-right: 5vw;
+   width: 100%;
+   display: flex;
 }
 
-.navbar-lateral li::after {
+.nav-lateral ul li a::after {
     margin-top: -6px;
     content: "";
     width: 0;
@@ -68,19 +64,22 @@ body {
     transition: 0.5s;
 }
 
-.navbar-lateral li:hover::after {
+.nav-lateral ul li a:hover{
     width: 100%;
+    color: white;
 }
 
 .nav-lateral ul li a{
-    margin-left: -2vw;
     font-family: Verdana;
     font-size: 18px;
     text-decoration: none;
     color: #593F42;
     font-size: 18px;
-    margin-top: 5px;
+    margin-top: 10px;
 }
+
+
+
 
 
  /* CSS DO NAVBAR PRINCIPAL */
@@ -130,7 +129,7 @@ body {
 
 .navbar-nav-pages{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     width: 50%;
     height: 100%;
 }
@@ -142,7 +141,7 @@ body {
         list-style: none;
         position: relative;
         margin-top: -5px;
-        margin-right: -22vw;
+        margin-right: -25vw;
     }
 
     .navbar-nav-pages li::after {
@@ -176,11 +175,11 @@ body {
         margin-top: -5px;
     }
 
-/* PARTE DO LANÇAMENTO DO MES*/
+/* SEÇÕES DOS LIVROS */
 
 .lancamentos {
     background-color: #F2B279;
-    height: 30vh;
+    height: 35vh;
     width: 120%;
     margin-right: 20vw;
     border: 2px solid white;
@@ -202,12 +201,147 @@ body {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    background-color: yellow;
     height: 90%;
     width: 100%;
 }
-.books-lancamentos{
-    background-color: red;
-    height: 70%;
-    width: 10vw;
+.books-lancamentos {
+    display: grid;
+    background-color: #F2E3B3;
+    height: 95%;
+    width: 13vw;
+    border: 1px solid white;
+    border-radius: 10px;
+    align-items: center;
+}
+
+.books-lancamentos img{
+    margin-top: 1vh;
+    margin-left: 3.5vw;
+}
+
+.books-lancamentos p{
+    display: grid;
+    justify-content: center;
+    margin-bottom: 1vh;
+    font-family: Verdana;
+    font-size: 15px;
+    color: #593F42;
+}
+
+.btn-alugar{
+    background-color: #593F42;
+    width: 50%;
+    margin-top: -2vh;
+    margin-left: 3vw;
+    border: 1px solid white;
+    border-radius: 0px 10px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-alugar:hover{
+    color: #F2B279;
+}
+
+/* FOOTER */
+
+.footer-home{
+    display: flex;
+    bottom: 0;
+    left: 0;
+    height: 10vh;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #F2B279;
+    border: 1px solid white;
+    margin-bottom: -7vh;
+
+}
+
+.footer-home div{
+    display: flex;
+}
+
+.footer-home p{
+    font-family: Verdana;
+    font-size: 16px;
+    margin-left: 5vw;
+}
+
+
+/* SEÇÃO DE TABELAS */
+.container-tabela{
+    margin-top: 9vh;
+    margin-left: -10vw;
+    background-color: #F2B279;
+    border: 1px solid white;
+    border-radius: 50px 0px;
+    height: 80vh;
+    width: 130%;
+
+
+}
+
+#title-tabela{
+    margin-left: 2vw;
+    margin-top: 2vh;
+    height: 10%;
+    width: 100%;
+    font-family: Verdana;
+    color: #593F42;
+    font-size: 20px;
+}
+
+.btn-adicionaritem {
+    background-color: #593F42;
+    width: 10%;
+    margin-top: -5vh;
+    margin-left: 71vw;
+    border: 1px solid white;
+    border-radius: 0px 10px;
+    color: white;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-adicionaritem:hover {
+    color: #F2B279;
+}
+
+.btn-controllers{
+    background-color: #593F42;
+    width: auto;
+    height: auto;
+    margin-left: 2vw;
+    border: 1px solid white;
+    border-radius: 0px 10px;
+    color: white;
+    text-decoration: none;
+}
+
+.btn-controllers:hover {
+    color: #F2B279;
+}
+
+.item-title{
+    font-family: Verdana;
+    color: #593F42;
+}
+
+/* SOBRE NOS */
+
+#sobre-nos{
+    font-family: Verdana;
+    font-size: 36px;
+    color: #593F42;
+}
+
+#sobre-nos-p{
+    font-family: Verdana;
+    font-size: 20px;
+    color: #593F42;
 }

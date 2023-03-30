@@ -31,6 +31,9 @@
                         <li>
                             <a class="nav-link text-dark" asp-area="" asp-controller="Clientes" asp-action="Index">Clientes</a>
                         </li>
+                        <li>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Sobre">Sobre Nós</a>
+                        </li>
                     </ul>
                     <ul class="login-part">
                         <li>
@@ -47,9 +50,13 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - UC_13_Kauan_LibraryOfOz_00001 - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <footer class="footer-home">
+        <div>
+            <a class="navbar-logo" asp-area="" asp-controller="Home" asp-action="Index"><img id="icons-nav" src="/imagens/book-logo.png" />Library of OZ</a>
+            <p> (11) 98888-8888</p>
+            <p> libraryofoz@library.sp </p>
+            <p> Av. Autonomista, 00 - Osasco/SP  </p>
+            
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>

@@ -4,34 +4,36 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<body>
+
+<section class="container-tabela">
+        <h1 id="title-tabela">Clientes</h1>
+
 <table class="table">
+    <a class="btn-adicionaritem" asp-action="Create">Adicionar Cliente</a>
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.NomeCliente)
+                <p class="item-title"> @Html.DisplayNameFor(model => model.NomeCliente)</p>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataNascimento)
+                <p class="item-title">@Html.DisplayNameFor(model => model.DataNascimento)</p>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Telefone)
+                <p class="item-title">@Html.DisplayNameFor(model => model.Telefone) <p/>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Email)
+                        <p class="item-title">@Html.DisplayNameFor(model => model.Email)</p>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Senha)
+                        <p class="item-title">@Html.DisplayNameFor(model => model.Senha)</p>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Rg)
+                        <p class="item-title">@Html.DisplayNameFor(model => model.Rg)</p>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Endereco)
+                        <p class="item-title">@Html.DisplayNameFor(model => model.Endereco)</p>
             </th>
             <th></th>
         </tr>
@@ -40,32 +42,35 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.NomeCliente)
+                            <p class="item-title">@Html.DisplayFor(modelItem => item.NomeCliente)</p>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DataNascimento)
+                            <p class="item-title">@Html.DisplayFor(modelItem => item.DataNascimento)</p>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Telefone)
+                            <p class="item-title">@Html.DisplayFor(modelItem => item.Telefone)</p>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Email)
+                            <p class="item-title">@Html.DisplayFor(modelItem => item.Email)</p>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Senha)
+                            <p class="item-title">@Html.DisplayFor(modelItem => item.Senha)</p>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Rg)
+                            <p class="item-title">@Html.DisplayFor(modelItem => item.Rg)</p>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Endereco)
+                            <p class="item-title">@Html.DisplayFor(modelItem => item.Endereco)</p>
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.ClienteId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ClienteId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ClienteId">Delete</a>
+                <a class="btn-controllers" asp-action="Edit" asp-route-id="@item.ClienteId">Editar</a> |
+                <a class="btn-controllers" asp-action="Details" asp-route-id="@item.ClienteId">Detalhes</a> |
+                <a class="btn-controllers" asp-action="Delete" asp-route-id="@item.ClienteId">Deletar</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+    </section>
+
+</body>

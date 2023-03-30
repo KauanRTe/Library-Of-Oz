@@ -4,22 +4,24 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
+<body>
+    <section class="container-tabela">
+
+        <h1 id="title-tabela">Aluguel de Livros</h1>
+
 <table class="table">
+    <a class="btn-adicionaritem" asp-action="Create">Adicionar Aluguel</a>
     <thead>
         <tr>
             <th>
-                @Html.DisplayNameFor(model => model.NomeLivro)
+                <p class="item-title">@Html.DisplayNameFor(model => model.NomeLivro)</p>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.NomeCliente)
+                <p class="item-title">@Html.DisplayNameFor(model => model.NomeCliente)</p>
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.DataDevolucao)
+                <p class="item-title">@Html.DisplayNameFor(model => model.DataDevolucao)</p>
             </th>
             <th></th>
         </tr>
@@ -28,20 +30,22 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.NomeLivro.NomeLivro)
+                <p class="item-title">@Html.DisplayFor(modelItem => item.NomeLivro.NomeLivro)</p>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.NomeCliente.NomeCliente)
+                <p class="item-title">@Html.DisplayFor(modelItem => item.NomeCliente.NomeCliente)</p>
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.DataDevolucao)
+                <p class="item-title">@Html.DisplayFor(modelItem => item.DataDevolucao)</p>
             </td>
             <td>
-                <a asp-action="Edit" asp-route-id="@item.AluguelId">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.AluguelId">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.AluguelId">Delete</a>
+                <a class="btn-controllers" asp-action="Edit" asp-route-id="@item.AluguelId">Editar</a>
+                <a class="btn-controllers" asp-action="Details" asp-route-id="@item.AluguelId">Detalhes</a>
+                <a class="btn-controllers" asp-action="Delete" asp-route-id="@item.AluguelId">Excluir</a>
             </td>
         </tr>
 }
     </tbody>
 </table>
+    </section>
+</body>
